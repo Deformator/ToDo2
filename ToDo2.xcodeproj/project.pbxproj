@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F8BF1AC61FF6DC4900EB779E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF1AC51FF6DC4900EB779E /* AppDelegate.swift */; };
-		F8BF1AC81FF6DC4900EB779E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF1AC71FF6DC4900EB779E /* ViewController.swift */; };
 		F8BF1ACB1FF6DC4900EB779E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BF1AC91FF6DC4900EB779E /* Main.storyboard */; };
 		F8BF1ACD1FF6DC4900EB779E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8BF1ACC1FF6DC4900EB779E /* Assets.xcassets */; };
 		F8BF1AD01FF6DC4900EB779E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BF1ACE1FF6DC4900EB779E /* LaunchScreen.storyboard */; };
+		F8BF1AD81FF6F8BD00EB779E /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF1AD71FF6F8BD00EB779E /* ListTableViewController.swift */; };
+		F8BF1ADA1FF6F8F800EB779E /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF1AD91FF6F8F800EB779E /* TaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F8BF1AC21FF6DC4900EB779E /* ToDo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BF1AC51FF6DC4900EB779E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8BF1AC71FF6DC4900EB779E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8BF1ACA1FF6DC4900EB779E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8BF1ACC1FF6DC4900EB779E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8BF1ACF1FF6DC4900EB779E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8BF1AD11FF6DC4900EB779E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8BF1AD71FF6F8BD00EB779E /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		F8BF1AD91FF6F8F800EB779E /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				F8BF1AC51FF6DC4900EB779E /* AppDelegate.swift */,
-				F8BF1AC71FF6DC4900EB779E /* ViewController.swift */,
 				F8BF1AC91FF6DC4900EB779E /* Main.storyboard */,
 				F8BF1ACC1FF6DC4900EB779E /* Assets.xcassets */,
 				F8BF1ACE1FF6DC4900EB779E /* LaunchScreen.storyboard */,
 				F8BF1AD11FF6DC4900EB779E /* Info.plist */,
+				F8BF1AD71FF6F8BD00EB779E /* ListTableViewController.swift */,
+				F8BF1AD91FF6F8F800EB779E /* TaskViewController.swift */,
 			);
 			path = ToDo2;
 			sourceTree = "<group>";
@@ -136,8 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8BF1AC81FF6DC4900EB779E /* ViewController.swift in Sources */,
 				F8BF1AC61FF6DC4900EB779E /* AppDelegate.swift in Sources */,
+				F8BF1AD81FF6F8BD00EB779E /* ListTableViewController.swift in Sources */,
+				F8BF1ADA1FF6F8F800EB779E /* TaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +285,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Weed-Forge.ToDo2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Weed-Forge.ToDo2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
