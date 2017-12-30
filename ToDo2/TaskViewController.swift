@@ -39,7 +39,10 @@ class TaskViewController: UIViewController {
         title = "New note"
         createDatePicker()
         
-        self.titleTask.resignFirstResponder()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
     @IBAction func submitPressed(_ sender: UIButton) {

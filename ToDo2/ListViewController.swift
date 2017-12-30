@@ -4,8 +4,8 @@
 //
 //  Created by Andrii Damm on 2017-12-29.
 //  Copyright © 2017 Andrii Damm. All rights reserved.
-//  Version: 0.7
-//  Commite: Adding styles for task list. Adding completion marks
+//  Version: 0.8
+//  Commite: Changing completion mark to switchers 
 
 import UIKit
 import CoreData
@@ -57,12 +57,18 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.layer.borderWidth = 0.5
         cell.layer.borderColor = UIColor.green.cgColor
         cell.layer.cornerRadius = 20
+        cell.taskCompletionSwitcher.tag = indexPath.row
         
-        cell.accessoryType = self.tasks[indexPath.row].completion ? .checkmark : .none
-//        if self.tasks[indexPath.row].completion == true {
-//            cell.taskTitle.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-//            cell.taskDueTime.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-//        }
+//        cell.accessoryType = self.tasks[indexPath.row].completion ? .checkmark : .none
+        if self.tasks[indexPath.row].completion == true {
+            cell.taskCompletionSwitcher.setOn(false, animated: true)
+            cell.taskTitle.textColor = #colorLiteral(red: 0.3669572473, green: 0.3970608115, blue: 0.4392519891, alpha: 1)
+            cell.taskDueTime.textColor = #colorLiteral(red: 0.3725490196, green: 0.3960784314, blue: 0.4352941176, alpha: 1)
+        } else {
+            cell.taskCompletionSwitcher.setOn(true, animated: true)
+            cell.taskTitle.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            cell.taskDueTime.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        }
         
 
         cell.taskTitle?.text = tasks[indexPath.row].title
@@ -94,50 +100,14 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             print(error.localizedDescription)
         }
         
-        
-
- 
     }
 
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let ac = UIAlertController(
-//            title: "\(tasks[indexPath.row].title!)",
-//            message: "\(tasks[indexPath.row].taskDescription!)",
-//            preferredStyle: .actionSheet)
-//        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-//
-//        let isDoneTitle = self.tasks[indexPath.row].completion ? "Return to undone" : "Done"
-//
-//        let isDone = UIAlertAction(title: isDoneTitle, style: .default) { (action: UIAlertAction) in
-//            let cell = tableView.cellForRow(at: indexPath)
-//            self.tasks[indexPath.row].completion = !self.tasks[indexPath.row].completion
-//            cell?.accessoryType = self.tasks[indexPath.row].completion ? .checkmark : .none
-//            tableView.reloadData()
-//        }
-//        let edit = UIAlertAction(title: "Edit", style: .default) { (action: UIAlertAction) in
-//
-//        func prepare(for segue: UIStoryboardSegue, sender: Any?){
-//            if segue.identifier == "details" {
-//                if let indexPath = tableView.indexPathForSelectedRow {
-//                    let tvk = segue.destination as! TaskViewController
-//                    tvk.titleT = self.tasks[indexPath.row].title!
-//                    tvk.descT = self.tasks[indexPath.row].taskDescription!
-//                    tvk.dueDateT = self.tasks[indexPath.row].dueDate!
-//                }
-//            }
-//            }
-//
-//
-//        }
-//        ac.addAction(isDone)
-//        ac.addAction(edit)
-//        ac.addAction(cancel)
-//
-//        present(ac, animated: true, completion: nil)
-//        tableView.deselectRow(at: indexPath, animated: true)
-//
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        tableView.deselectRow(at: indexPath, animated: true)
+
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "details" {
@@ -149,15 +119,43 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
+    
+    @IBAction func switchTaskCompletion(_ sender: UISwitch) {
 
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
+            
+            do {
+                let results = try context.fetch(request)
+                if results.count > 0 {
+                   var resutlsObjects = results as! [NSManagedObject]
+                    let result = resutlsObjects[sender.tag]
+               
+                    _ = result.value(forKey: "completion") as? String
+                            if sender.isOn {
+                                result.setValue(false, forKey: "completion")
+                            } else {
+                                result.setValue(true, forKey: "completion")
+                            }
+                            
+                            do {
+                                try context.save()
+                            } catch {
+                                print(error.localizedDescription)
+                            }
+                       
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+                    
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        
+        self.tableVIewList.reloadData()
     }
-    */
+    
 
 
 }

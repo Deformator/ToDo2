@@ -69,7 +69,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzx-EI-hd7">
                                 <rect key="frame" x="0.0" y="114" width="375" height="58"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gM6-B6-6C9" customClass="CustomTextView" customModule="ToDo2" customModuleProvider="target">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gM6-B6-6C9" customClass="CustomTextView" customModule="ToDo2" customModuleProvider="target">
                                         <rect key="frame" x="16" y="8" width="343" height="42"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -330,9 +330,19 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Nb-fu-gBT">
+                                                    <rect key="frame" x="279" y="14" width="51" height="31"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="switchTaskCompletion:" destination="WNL-xO-pgg" eventType="valueChanged" id="G0n-YR-WcD"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="2Nb-fu-gBT" firstAttribute="centerY" secondItem="HTg-4o-pyd" secondAttribute="centerY" id="59G-wO-ptE"/>
+                                                <constraint firstItem="2Nb-fu-gBT" firstAttribute="top" secondItem="HTg-4o-pyd" secondAttribute="top" constant="14" id="I0h-pq-KfI"/>
                                                 <constraint firstItem="f7a-8J-yP8" firstAttribute="leading" secondItem="HTg-4o-pyd" secondAttribute="leading" constant="15" id="TZ5-Lu-fgr"/>
+                                                <constraint firstAttribute="trailing" secondItem="2Nb-fu-gBT" secondAttribute="trailing" constant="15" id="ZTx-fh-Eyo"/>
                                                 <constraint firstItem="9wA-le-RpO" firstAttribute="leading" secondItem="HTg-4o-pyd" secondAttribute="leading" constant="15" id="iHF-Rx-laB"/>
                                                 <constraint firstItem="f7a-8J-yP8" firstAttribute="top" secondItem="HTg-4o-pyd" secondAttribute="top" constant="8" id="vsf-D7-8s2"/>
                                                 <constraint firstAttribute="bottom" secondItem="9wA-le-RpO" secondAttribute="bottom" constant="8" id="xJr-jn-eEq"/>
@@ -341,9 +351,10 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="taskCompletionSwitcher" destination="2Nb-fu-gBT" id="Lak-yD-fbj"/>
                                             <outlet property="taskDueTime" destination="9wA-le-RpO" id="hH2-bS-92O"/>
                                             <outlet property="taskTitle" destination="f7a-8J-yP8" id="YNr-FM-eGF"/>
-                                            <segue destination="j9i-Mc-2JI" kind="show" identifier="details" id="pqS-ro-cA0"/>
+                                            <segue destination="j9i-Mc-2JI" kind="show" identifier="details" id="ez7-Vt-GZI"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -412,6 +423,6 @@
         <image name="Background" width="414" height="736"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pqS-ro-cA0"/>
+        <segue reference="ez7-Vt-GZI"/>
     </inferredMetricsTieBreakers>
 </document>
