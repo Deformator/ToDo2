@@ -4,13 +4,14 @@
 //
 //  Created by Andrii Damm on 2017-12-29.
 //  Copyright © 2017 Andrii Damm. All rights reserved.
-//  Version: 0.8
-//  Commite: Changing completion mark to switchers 
+//  Version: 0.9
+//  Commite: Inner documentation added
 
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
+    //cells outlets
     @IBOutlet weak var taskTitle: UILabel!
     @IBOutlet weak var taskDueTime: UILabel!
     @IBOutlet weak var taskCompletionSwitcher: UISwitch!
@@ -18,13 +19,12 @@ class CustomTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }
