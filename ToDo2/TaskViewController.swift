@@ -4,10 +4,11 @@
 //
 //  Created by Andrii Damm on 2017-12-29.
 //  Copyright © 2017 Andrii Damm. All rights reserved.
-//  Version: 0.2
-//  Commite: Create datePicker for due date field
+//  Version: 0.4
+//  Commite: Create Core Data entity and saving a new task into it
 
 import UIKit
+import CoreData
 
 class TaskViewController: UIViewController {
     
@@ -25,9 +26,29 @@ class TaskViewController: UIViewController {
     }
 
     @IBAction func submitPressed(_ sender: UIButton) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Task", in: context)
+        let taskObject = NSManagedObject(entity: entity!, insertInto: context) as! Task
+        taskObject.title = titleTask.text
+        taskObject.taskDescription = descriptionTask.text
+        taskObject.dueDate = dueDateField.text
+        taskObject.completion = false
+        
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+        
     }
     
-    @IBAction func cancelPressed(_ sender: UIButton) {
+    @IBAction func clearPressed(_ sender: UIButton) {
+        titleTask.text = ""
+        descriptionTask.text = ""
+        dueDateField.text = ""
     }
     
     func createDatePicker() {

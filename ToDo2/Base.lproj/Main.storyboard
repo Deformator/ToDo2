@@ -113,12 +113,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCJ-9H-AwC">
-                                <rect key="frame" x="250" y="396" width="48" height="30"/>
+                                <rect key="frame" x="256" y="396" width="36" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Cancel"/>
+                                <state key="normal" title="Clear"/>
                                 <connections>
-                                    <action selector="cancelPressed:" destination="j9i-Mc-2JI" eventType="touchUpInside" id="WFP-e3-wIy"/>
+                                    <action selector="clearPressed:" destination="j9i-Mc-2JI" eventType="touchUpInside" id="rGZ-Fr-4hK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJb-Pd-aPN">

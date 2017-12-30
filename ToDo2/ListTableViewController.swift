@@ -4,8 +4,8 @@
 //
 //  Created by Andrii Damm on 2017-12-29.
 //  Copyright © 2017 Andrii Damm. All rights reserved.
-//  Version: 0.2
-//  Commite: Create View Controllers and implement base design
+//  Version: 0.4
+//  Commite: Create Core Data entity and saving a new task into it
 
 import UIKit
 
