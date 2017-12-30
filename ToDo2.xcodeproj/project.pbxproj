@@ -11,11 +11,12 @@
 		F8AD28351FF723F800963DE8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD28341FF723F800963DE8 /* CustomButton.swift */; };
 		F8AD28371FF7276B00963DE8 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD28361FF7276B00963DE8 /* CustomTextView.swift */; };
 		F8AD28391FF728AD00963DE8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD28381FF728AD00963DE8 /* CustomTextField.swift */; };
+		F8B406041FF73F7B001A2E42 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B406031FF73F7B001A2E42 /* CustomTableViewCell.swift */; };
 		F8BF1AC61FF6DC4900EB779E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF1AC51FF6DC4900EB779E /* AppDelegate.swift */; };
 		F8BF1ACB1FF6DC4900EB779E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BF1AC91FF6DC4900EB779E /* Main.storyboard */; };
 		F8BF1ACD1FF6DC4900EB779E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8BF1ACC1FF6DC4900EB779E /* Assets.xcassets */; };
 		F8BF1AD01FF6DC4900EB779E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BF1ACE1FF6DC4900EB779E /* LaunchScreen.storyboard */; };
-		F8BF1AD81FF6F8BD00EB779E /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF1AD71FF6F8BD00EB779E /* ListTableViewController.swift */; };
+		F8BF1AD81FF6F8BD00EB779E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF1AD71FF6F8BD00EB779E /* ListViewController.swift */; };
 		F8BF1ADA1FF6F8F800EB779E /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF1AD91FF6F8F800EB779E /* TaskViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,13 +26,14 @@
 		F8AD28341FF723F800963DE8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F8AD28361FF7276B00963DE8 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		F8AD28381FF728AD00963DE8 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		F8B406031FF73F7B001A2E42 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		F8BF1AC21FF6DC4900EB779E /* ToDo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BF1AC51FF6DC4900EB779E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8BF1ACA1FF6DC4900EB779E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8BF1ACC1FF6DC4900EB779E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8BF1ACF1FF6DC4900EB779E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8BF1AD11FF6DC4900EB779E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8BF1AD71FF6F8BD00EB779E /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		F8BF1AD71FF6F8BD00EB779E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F8BF1AD91FF6F8F800EB779E /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,10 +91,11 @@
 				F8BF1ACC1FF6DC4900EB779E /* Assets.xcassets */,
 				F8BF1ACE1FF6DC4900EB779E /* LaunchScreen.storyboard */,
 				F8BF1AD11FF6DC4900EB779E /* Info.plist */,
-				F8BF1AD71FF6F8BD00EB779E /* ListTableViewController.swift */,
+				F8BF1AD71FF6F8BD00EB779E /* ListViewController.swift */,
 				F8BF1AD91FF6F8F800EB779E /* TaskViewController.swift */,
 				F8AD28311FF7100200963DE8 /* ToDo2.xcdatamodeld */,
 				F8B406021FF737BB001A2E42 /* CustomUIClasses */,
+				F8B406031FF73F7B001A2E42 /* CustomTableViewCell.swift */,
 			);
 			path = ToDo2;
 			sourceTree = "<group>";
@@ -171,8 +174,9 @@
 			files = (
 				F8BF1AC61FF6DC4900EB779E /* AppDelegate.swift in Sources */,
 				F8AD28331FF7100200963DE8 /* ToDo2.xcdatamodeld in Sources */,
+				F8B406041FF73F7B001A2E42 /* CustomTableViewCell.swift in Sources */,
 				F8AD28371FF7276B00963DE8 /* CustomTextView.swift in Sources */,
-				F8BF1AD81FF6F8BD00EB779E /* ListTableViewController.swift in Sources */,
+				F8BF1AD81FF6F8BD00EB779E /* ListViewController.swift in Sources */,
 				F8BF1ADA1FF6F8F800EB779E /* TaskViewController.swift in Sources */,
 				F8AD28351FF723F800963DE8 /* CustomButton.swift in Sources */,
 				F8AD28391FF728AD00963DE8 /* CustomTextField.swift in Sources */,

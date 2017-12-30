@@ -21,6 +21,7 @@ class TaskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        datePicker.setValue(UIColor.white, forKeyPath: "textColor")
         
         title = "New note"
         createDatePicker()
