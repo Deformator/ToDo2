@@ -4,8 +4,8 @@
 //
 //  Created by Andrii Damm on 2017-12-29.
 //  Copyright © 2017 Andrii Damm. All rights reserved.
-//  Version: 0.4
-//  Commite: Create Core Data entity and saving a new task into it
+//  Version: 0.5
+//  Commite: Adding styles for new task screen. Updated nav bar
 
 import UIKit
 import CoreData
@@ -21,8 +21,9 @@ class TaskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       createDatePicker()
+        
+        title = "New note"
+        createDatePicker()
     }
 
     @IBAction func submitPressed(_ sender: UIButton) {

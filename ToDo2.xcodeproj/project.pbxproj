@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F8AD28331FF7100200963DE8 /* ToDo2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F8AD28311FF7100200963DE8 /* ToDo2.xcdatamodeld */; };
+		F8AD28351FF723F800963DE8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD28341FF723F800963DE8 /* CustomButton.swift */; };
+		F8AD28371FF7276B00963DE8 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD28361FF7276B00963DE8 /* CustomTextView.swift */; };
+		F8AD28391FF728AD00963DE8 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD28381FF728AD00963DE8 /* CustomTextField.swift */; };
 		F8BF1AC61FF6DC4900EB779E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BF1AC51FF6DC4900EB779E /* AppDelegate.swift */; };
 		F8BF1ACB1FF6DC4900EB779E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8BF1AC91FF6DC4900EB779E /* Main.storyboard */; };
 		F8BF1ACD1FF6DC4900EB779E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8BF1ACC1FF6DC4900EB779E /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		F8AD280B1FF70E5100963DE8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F8AD28321FF7100200963DE8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F8AD28341FF723F800963DE8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		F8AD28361FF7276B00963DE8 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		F8AD28381FF728AD00963DE8 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		F8BF1AC21FF6DC4900EB779E /* ToDo2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BF1AC51FF6DC4900EB779E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8BF1ACA1FF6DC4900EB779E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +52,16 @@
 				F8AD280B1FF70E5100963DE8 /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8B406021FF737BB001A2E42 /* CustomUIClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F8AD28341FF723F800963DE8 /* CustomButton.swift */,
+				F8AD28361FF7276B00963DE8 /* CustomTextView.swift */,
+				F8AD28381FF728AD00963DE8 /* CustomTextField.swift */,
+			);
+			path = CustomUIClasses;
 			sourceTree = "<group>";
 		};
 		F8BF1AB91FF6DC4900EB779E = {
@@ -76,6 +92,7 @@
 				F8BF1AD71FF6F8BD00EB779E /* ListTableViewController.swift */,
 				F8BF1AD91FF6F8F800EB779E /* TaskViewController.swift */,
 				F8AD28311FF7100200963DE8 /* ToDo2.xcdatamodeld */,
+				F8B406021FF737BB001A2E42 /* CustomUIClasses */,
 			);
 			path = ToDo2;
 			sourceTree = "<group>";
@@ -154,8 +171,11 @@
 			files = (
 				F8BF1AC61FF6DC4900EB779E /* AppDelegate.swift in Sources */,
 				F8AD28331FF7100200963DE8 /* ToDo2.xcdatamodeld in Sources */,
+				F8AD28371FF7276B00963DE8 /* CustomTextView.swift in Sources */,
 				F8BF1AD81FF6F8BD00EB779E /* ListTableViewController.swift in Sources */,
 				F8BF1ADA1FF6F8F800EB779E /* TaskViewController.swift in Sources */,
+				F8AD28351FF723F800963DE8 /* CustomButton.swift in Sources */,
+				F8AD28391FF728AD00963DE8 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

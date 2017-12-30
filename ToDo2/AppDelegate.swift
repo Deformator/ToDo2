@@ -1,10 +1,11 @@
 //
-//  AppDelegate.swift
+//  TaskViewController.swift
 //  ToDo2
 //
 //  Created by Andrii Damm on 2017-12-29.
 //  Copyright © 2017 Andrii Damm. All rights reserved.
-//
+//  Version: 0.5
+//  Commite: Adding styles for new task screen. Updated nav bar
 
 import UIKit
 import CoreData
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        UINavigationBar.appearance().tintColor = .white
         // Override point for customization after application launch.
         return true
     }
