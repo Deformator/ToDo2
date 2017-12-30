@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().tintColor = .white
         // Override point for customization after application launch.
+        
         return true
     }
 

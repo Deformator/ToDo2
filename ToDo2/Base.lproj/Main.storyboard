@@ -28,9 +28,9 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCJ-9H-AwC" customClass="CustomButton" customModule="ToDo2" customModuleProvider="target">
-                                <rect key="frame" x="209" y="390" width="150" height="50"/>
+                                <rect key="frame" x="209" y="434" width="150" height="50"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <state key="normal" title="Clear">
+                                <state key="normal" title="Cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -45,12 +45,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="clearPressed:" destination="j9i-Mc-2JI" eventType="touchUpInside" id="rGZ-Fr-4hK"/>
-                                    <segue destination="WNL-xO-pgg" kind="show" id="Vdj-kx-h6f"/>
+                                    <action selector="cancelPressed:" destination="j9i-Mc-2JI" eventType="touchUpInside" id="gag-pA-VkF"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Izy-dg-VdG" userLabel="Separator">
-                                <rect key="frame" x="0.0" y="40" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSf-FH-wff">
                                         <rect key="frame" x="16" y="3" width="343" height="24"/>
@@ -68,11 +67,12 @@
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzx-EI-hd7">
-                                <rect key="frame" x="0.0" y="70" width="375" height="58"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="58"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gM6-B6-6C9" customClass="CustomTextView" customModule="ToDo2" customModuleProvider="target">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gM6-B6-6C9" customClass="CustomTextView" customModule="ToDo2" customModuleProvider="target">
                                         <rect key="frame" x="16" y="8" width="343" height="42"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="gX9-Rx-zVf"/>
                                         </constraints>
@@ -101,7 +101,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpD-Ji-T2F" userLabel="Separator">
-                                <rect key="frame" x="0.0" y="128" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="172" width="375" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-6Y-PjV">
                                         <rect key="frame" x="16" y="0.0" width="343" height="30"/>
@@ -121,11 +121,12 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utp-IG-iBq">
-                                <rect key="frame" x="0.0" y="158" width="375" height="122"/>
+                                <rect key="frame" x="0.0" y="202" width="375" height="122"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eDs-Yk-dEw" customClass="CustomTextView" customModule="ToDo2" customModuleProvider="target">
                                         <rect key="frame" x="16" y="8" width="343" height="106"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -153,7 +154,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmH-7D-Tab" userLabel="Separator">
-                                <rect key="frame" x="0.0" y="280" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="324" width="375" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETh-nw-D6F">
                                         <rect key="frame" x="16" y="3" width="343" height="24"/>
@@ -171,11 +172,12 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DRU-EU-4KG">
-                                <rect key="frame" x="0.0" y="310" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="354" width="375" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTv-Zg-jo9" customClass="CustomTextField" customModule="ToDo2" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTv-Zg-jo9" customClass="CustomTextField" customModule="ToDo2" customModuleProvider="target">
                                         <rect key="frame" x="16" y="10" width="343" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -203,7 +205,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJb-Pd-aPN" customClass="CustomButton" customModule="ToDo2" customModuleProvider="target">
-                                <rect key="frame" x="16" y="390" width="150" height="50"/>
+                                <rect key="frame" x="16" y="434" width="150" height="50"/>
                                 <color key="backgroundColor" red="0.30980392156862746" green="0.54117647058823526" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ref-5A-wNc"/>
@@ -226,7 +228,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="submitPressed:" destination="j9i-Mc-2JI" eventType="touchUpInside" id="OgY-Cv-iFg"/>
-                                    <segue destination="WNL-xO-pgg" kind="show" id="Lep-fZ-Mik"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -268,6 +269,7 @@
                     <connections>
                         <outlet property="descriptionTask" destination="eDs-Yk-dEw" id="Bg4-5X-r8B"/>
                         <outlet property="dueDateField" destination="QTv-Zg-jo9" id="Tuq-sC-Hsq"/>
+                        <outlet property="submitButton" destination="IJb-Pd-aPN" id="9aY-7N-Gxo"/>
                         <outlet property="titleTask" destination="gM6-B6-6C9" id="ISD-yH-CXk"/>
                     </connections>
                 </viewController>
@@ -284,10 +286,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="klc-OK-Uhd">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2MA-QV-iMX" userLabel="Separator">
-                                <rect key="frame" x="0.0" y="30" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="74" width="375" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slJ-ez-XMm">
                                         <rect key="frame" x="20" y="0.0" width="339" height="30"/>
@@ -306,7 +308,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SZD-Hf-ikW">
-                                <rect key="frame" x="16" y="68" width="343" height="579"/>
+                                <rect key="frame" x="16" y="112" width="343" height="535"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellTask" id="8X6-ec-OWx" customClass="CustomTableViewCell" customModule="ToDo2" customModuleProvider="target">
@@ -337,9 +339,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="taskDueTime" destination="9wA-le-RpO" id="hH2-bS-92O"/>
                                             <outlet property="taskTitle" destination="f7a-8J-yP8" id="YNr-FM-eGF"/>
+                                            <segue destination="j9i-Mc-2JI" kind="show" identifier="details" id="pqS-ro-cA0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -369,7 +373,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="IRL-mW-jlz">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="j9i-Mc-2JI" kind="show" id="am0-m9-M34"/>
+                                <segue destination="j9i-Mc-2JI" kind="show" identifier="" id="am0-m9-M34"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -408,7 +412,6 @@
         <image name="Background" width="414" height="736"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="am0-m9-M34"/>
-        <segue reference="Vdj-kx-h6f"/>
+        <segue reference="pqS-ro-cA0"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -35,6 +35,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         } catch {
             print(error.localizedDescription)
         }
+        tableVIewList.reloadData()
     }
 
 
@@ -58,6 +59,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.layer.cornerRadius = 20
         
         cell.accessoryType = self.tasks[indexPath.row].completion ? .checkmark : .none
+//        if self.tasks[indexPath.row].completion == true {
+//            cell.taskTitle.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+//            cell.taskDueTime.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+//        }
+        
 
         cell.taskTitle?.text = tasks[indexPath.row].title
         cell.taskDueTime.text = tasks[indexPath.row].dueDate
@@ -77,6 +83,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
+        
         guard let tasksToDelete = tasks[indexPath.row] as? Task, editingStyle == .delete else {return}
         context.delete(tasksToDelete)
         do{
@@ -86,26 +93,61 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         } catch {
             print(error.localizedDescription)
         }
+        
+        
 
  
     }
 
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let ac = UIAlertController(title: "Task", message: "\(tasks[indexPath.row].title!)", preferredStyle: .actionSheet)
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        let isVisitedTitle = self.tasks[indexPath.row].completion ? "Return to undone" : "Done"
-        let isVisited = UIAlertAction(title: isVisitedTitle, style: .default) { (action: UIAlertAction) in
-            let cell = tableView.cellForRow(at: indexPath)
-            self.tasks[indexPath.row].completion = !self.tasks[indexPath.row].completion
-            cell?.accessoryType = self.tasks[indexPath.row].completion ? .checkmark : .none
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let ac = UIAlertController(
+//            title: "\(tasks[indexPath.row].title!)",
+//            message: "\(tasks[indexPath.row].taskDescription!)",
+//            preferredStyle: .actionSheet)
+//        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//
+//        let isDoneTitle = self.tasks[indexPath.row].completion ? "Return to undone" : "Done"
+//
+//        let isDone = UIAlertAction(title: isDoneTitle, style: .default) { (action: UIAlertAction) in
+//            let cell = tableView.cellForRow(at: indexPath)
+//            self.tasks[indexPath.row].completion = !self.tasks[indexPath.row].completion
+//            cell?.accessoryType = self.tasks[indexPath.row].completion ? .checkmark : .none
+//            tableView.reloadData()
+//        }
+//        let edit = UIAlertAction(title: "Edit", style: .default) { (action: UIAlertAction) in
+//
+//        func prepare(for segue: UIStoryboardSegue, sender: Any?){
+//            if segue.identifier == "details" {
+//                if let indexPath = tableView.indexPathForSelectedRow {
+//                    let tvk = segue.destination as! TaskViewController
+//                    tvk.titleT = self.tasks[indexPath.row].title!
+//                    tvk.descT = self.tasks[indexPath.row].taskDescription!
+//                    tvk.dueDateT = self.tasks[indexPath.row].dueDate!
+//                }
+//            }
+//            }
+//
+//
+//        }
+//        ac.addAction(isDone)
+//        ac.addAction(edit)
+//        ac.addAction(cancel)
+//
+//        present(ac, animated: true, completion: nil)
+//        tableView.deselectRow(at: indexPath, animated: true)
+//
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "details" {
+            if let indexPath = self.tableVIewList.indexPathForSelectedRow {
+                let tvk = segue.destination as! TaskViewController
+                tvk.titleT = self.tasks[indexPath.row].title!
+                tvk.descT = self.tasks[indexPath.row].taskDescription!
+                tvk.dueDateT = self.tasks[indexPath.row].dueDate!
+            }
         }
-        ac.addAction(isVisited)
-        ac.addAction(cancel)
-        
-        present(ac, animated: true, completion: nil)
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 
