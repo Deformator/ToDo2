@@ -1,10 +1,13 @@
-//
-//  CustomTextView.swift
-//  ToDo2
-//
-//  Created by Andrii Damm on 2017-12-29.
-//  Copyright © 2017 Andrii Damm. All rights reserved.
-//
+/*
+ * File name: CustomTextView.swift
+ * App Name: ToDo2
+ * Authors: Andrii Damm, Tarun Singh
+ * Student IDs: 300966307, 300967393
+ * Date: December 29, 2017
+ * Version: 1.0 - Internal documentation added.
+ * Description: Custom rounded UITextView for our app.
+ * Copyright © 2017 Andrii Damm. All rights reserved.
+ */
 
 import UIKit
 

@@ -1,18 +1,20 @@
-//
-//  TaskViewController.swift
-//  ToDo2
-//
-//  Created by Andrii Damm on 2017-12-29.
-//  Copyright © 2017 Andrii Damm. All rights reserved.
-//  Version: 0.9
-//  Commite: Inner documentation added
+/*
+ * File name: ListViewController.swift
+ * App Name: ToDo2
+ * Authors: Andrii Damm, Tarun Singh
+ * Student IDs: 300966307, 300967393
+ * Date: December 29, 2017
+ * Version: 1.0 - Internal documentation added.
+ * Description: ListViewController class for the to-do tasks list screen which allows user to view tasks list, add new tasks, delete a task by swiping left, mark any task as completed/pending or see and edit the task details by tapping on any task row.
+ * Copyright © 2017 Andrii Damm. All rights reserved.
+ */
 
 import UIKit
 import CoreData
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    //table view instanse
+    //table view instance
     @IBOutlet weak var tableVIewList: UITableView!
     
     //array of tasks from Core Data
@@ -24,7 +26,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         //cleaning background and separators for tableView
         tableVIewList.backgroundColor = .clear
         tableVIewList.tableFooterView = UIView(frame: CGRect.zero)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -94,7 +95,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        //implement "delete" functionality
+        //implement "delete" functionality (Task can be deleted by Left Swiping the row)
         guard let tasksToDelete = tasks[indexPath.row] as? Task, editingStyle == .delete else {return}
         
         //delete object from Core Data
@@ -143,7 +144,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             if results.count > 0 {
                 var resutlsObjects = results as! [NSManagedObject]
                 
-                //geting proper task by tag index
+                //getting proper task by tag index
                 let result = resutlsObjects[sender.tag]
                 
                 _ = result.value(forKey: "completion") as? String

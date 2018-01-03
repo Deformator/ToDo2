@@ -1,11 +1,13 @@
-//
-//  TaskViewController.swift
-//  ToDo2
-//
-//  Created by Andrii Damm on 2017-12-29.
-//  Copyright © 2017 Andrii Damm. All rights reserved.
-//  Version: 0.5
-//  Commite: Adding styles for new task screen. Updated nav bar
+/*
+ * File name: AppDelegate.swift
+ * App Name: ToDo2
+ * Authors: Andrii Damm, Tarun Singh
+ * Student IDs: 300966307, 300967393
+ * Date: December 29, 2017
+ * Version: 0.6 - Updated internal documentation.
+ * Description: AppDelegate class for the app. Added our own styles for the new task screen and also updated the nav bar.
+ * Copyright © 2017 Andrii Damm. All rights reserved.
+ */
 
 import UIKit
 import CoreData

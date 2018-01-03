@@ -1,11 +1,13 @@
-//
-//  TaskViewController.swift
-//  ToDo2
-//
-//  Created by Andrii Damm on 2017-12-29.
-//  Copyright © 2017 Andrii Damm. All rights reserved.
-//  Version: 0.9
-//  Commite: Inner documentation added
+/*
+ * File name: TaskViewController.swift
+ * App Name: ToDo2
+ * Authors: Andrii Damm, Tarun Singh
+ * Student IDs: 300966307, 300967393
+ * Date: December 29, 2017
+ * Version: 1.0 - Internal documentation added.
+ * Description: ViewController class for the To-do details screen which allows user to enter task details for a new task and submit it or to view and edit task details for a pre-existing task.
+ * Copyright © 2017 Andrii Damm. All rights reserved.
+ */
 
 import UIKit
 import CoreData
@@ -109,7 +111,6 @@ class TaskViewController: UIViewController {
                                     print(error.localizedDescription)
                                 }
                             }
-                        
                     }
                 }
             } catch {
@@ -137,7 +138,7 @@ class TaskViewController: UIViewController {
         
     }
     
-    //cancel button pressed functianality
+    //cancel button pressed functiponality
     @IBAction func cancelPressed(_ sender: UIButton) {
         
         //redirecting to root ViewController (ListViewController)
